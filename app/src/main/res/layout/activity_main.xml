@@ -7,7 +7,30 @@
     android:layout_height="match_parent"
     tools:context="com.example.serialportdemo.MainActivity">
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:text="选择串口"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_select_path"
+        android:textColor="#333333"/>
+
+
+    <TextView
+        android:layout_below="@+id/tv_select_path"
+        android:layout_marginTop="10dp"
+        android:text="选择波特率"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_select_baud"
+        android:textColor="#333333"
+        android:visibility="gone"/>
+
     <Button
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_select_baud"
         android:id="@+id/btn_open"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,5 +54,19 @@
         android:text="发送指令"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_openbox"
+        android:layout_below="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开钱箱"/>
+
+    <TextView
+        android:layout_below="@+id/btn_send"
+        android:id="@+id/tv_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
 
 </RelativeLayout>

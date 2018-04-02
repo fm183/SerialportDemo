@@ -90,10 +90,13 @@ public class LockerSerialportUtil {
                     try {
                         boxPort = new SerialPort(new File(path), baudrate, 0);
                     } catch (SecurityException e) {
+                        e.printStackTrace();
                         DisplayError(context, R.string.error_security);
                     } catch (IOException e) {
+                        e.printStackTrace();
                         DisplayError(context,R.string.error_unknown);
                     } catch (InvalidParameterException e) {
+                        e.printStackTrace();
                         DisplayError(context,R.string.error_configuration);
                     }
                 }
